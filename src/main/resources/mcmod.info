@@ -1,14 +1,14 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
-  "version": "${version}",
-  "mcversion": "${mcversion}",
+  "modid": "mmtest",
+  "name": "Modded Minecraft Test",
+  "description": "A test to mod Minecraft.",
+  "version": "0.1",
+  "mcversion": "1.8.9",
   "url": "",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["Gliath"],
+  "credits": "The Forge and FML guys and myself",
   "logoFile": "",
   "screenshots": [],
   "dependencies": []
