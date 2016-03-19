@@ -1,6 +1,8 @@
 package gliath.mmtest.initializer;
 
+import gliath.mmtest.MMTest;
 import gliath.mmtest.Reference;
+import gliath.mmtest.items.ModItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.item.Item;
@@ -11,7 +13,7 @@ public class ModItems {
     public static Item mod_item;
 
     public static void init() {
-        mod_item = new Item().setUnlocalizedName("mod_item");
+        mod_item = new ModItem().setUnlocalizedName("mod_item").setCreativeTab(MMTest.tabMod);
     }
 
     public static void register() {

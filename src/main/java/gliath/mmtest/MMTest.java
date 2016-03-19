@@ -1,7 +1,9 @@
 package gliath.mmtest;
 
+import gliath.mmtest.CreativeTab.ModTab;
 import gliath.mmtest.initializer.ModBlocks;
 import gliath.mmtest.initializer.ModItems;
+import gliath.mmtest.initializer.ModTileEntities;
 import gliath.mmtest.proxy.CommonProxy;
 import net.minecraft.init.Blocks;
 import net.minecraftforge.fml.common.Mod;
@@ -19,12 +21,15 @@ public class MMTest {
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxy proxy;
 
+    public static final ModTab tabMod = new ModTab("tabMod");
+
     @EventHandler
     public void init(FMLPreInitializationEvent event) {
         ModBlocks.init();
         ModBlocks.register();
         ModItems.init();
         ModItems.register();
+        ModTileEntities.register();
     }
 
     @EventHandler
