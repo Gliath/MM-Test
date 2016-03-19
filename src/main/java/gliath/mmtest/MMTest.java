@@ -3,9 +3,10 @@ package gliath.mmtest;
 import gliath.mmtest.CreativeTab.ModTab;
 import gliath.mmtest.initializer.ModBlocks;
 import gliath.mmtest.initializer.ModItems;
+import gliath.mmtest.initializer.ModRecipes;
 import gliath.mmtest.initializer.ModTileEntities;
 import gliath.mmtest.proxy.CommonProxy;
-import net.minecraft.init.Blocks;
+import gliath.mmtest.utility.ModLogger;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
 import net.minecraftforge.fml.common.SidedProxy;
@@ -25,6 +26,7 @@ public class MMTest {
 
     @EventHandler
     public void init(FMLPreInitializationEvent event) {
+        ModLogger.info("PreInitialization");
         ModBlocks.init();
         ModBlocks.register();
         ModItems.init();
@@ -34,12 +36,14 @@ public class MMTest {
 
     @EventHandler
     public void init(FMLInitializationEvent event) {
+        ModLogger.info("Initialization!");
         proxy.registerRenders();
+        ModRecipes.init();
     }
 
     @EventHandler
     public void init(FMLPostInitializationEvent event) {
-        // some example code
-        System.out.println("STONE BLOCK >> " + Blocks.stone.getUnlocalizedName());
+        ModLogger.info("PostInitialization");
+
     }
 }
