@@ -1,6 +1,6 @@
 package gliath.mmtest;
 
-import gliath.mmtest.CreativeTab.ModTab;
+import gliath.mmtest.creativetab.ModTab;
 import gliath.mmtest.initializer.ModBlocks;
 import gliath.mmtest.initializer.ModItems;
 import gliath.mmtest.initializer.ModRecipes;
@@ -13,6 +13,7 @@ import net.minecraftforge.fml.common.SidedProxy;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.MOD_VERSION)
 public class MMTest {
@@ -32,6 +33,7 @@ public class MMTest {
         ModItems.init();
         ModItems.register();
         ModTileEntities.register();
+        GameRegistry.registerWorldGenerator(new ModGeneration(), 0);
     }
 
     @EventHandler

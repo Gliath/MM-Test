@@ -1,4 +1,4 @@
-package gliath.mmtest.CreativeTab;
+package gliath.mmtest.creativetab;
 
 import gliath.mmtest.initializer.ModItems;
 import net.minecraft.creativetab.CreativeTabs;

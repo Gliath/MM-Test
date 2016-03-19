@@ -1,9 +1,7 @@
 package gliath.mmtest.initializer;
 
-import gliath.mmtest.MMTest;
 import gliath.mmtest.Reference;
 import gliath.mmtest.blocks.ModBlock;
-import net.minecraft.block.material.Material;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.resources.model.ModelResourceLocation;
 import net.minecraft.block.Block;
@@ -15,7 +13,7 @@ public class ModBlocks {
     public static Block mod_block;
 
     public static void init() {
-        mod_block = new ModBlock(Material.cloth).setUnlocalizedName("mod_block").setCreativeTab(MMTest.tabMod);
+        mod_block = new ModBlock();
     }
 
     public static void register() {

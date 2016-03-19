@@ -5,7 +5,8 @@
     "2": "blocks/log_big_oak",
     "3": "blocks/cobblestone_mossy",
     "4": "blocks/coarse_dirt",
-    "5": "blocks/iron_block"
+    "5": "blocks/iron_block",
+    "particle": "blocks/slime"
   },
   "elements": [
     {

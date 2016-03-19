@@ -1,5 +1,6 @@
 package gliath.mmtest.blocks;
 
+import gliath.mmtest.MMTest;
 import gliath.mmtest.items.ModItem;
 import gliath.mmtest.tileentity.ModTileEntity;
 import net.minecraft.block.Block;
@@ -17,8 +18,16 @@ import net.minecraft.world.World;
 
 public class ModBlock extends Block implements ITileEntityProvider {
 
-    public ModBlock(Material materialIn) {
-        super(materialIn);
+    public ModBlock() {
+        super(Material.rock);
+        this.setUnlocalizedName("mod_block");
+        this.setCreativeTab(MMTest.tabMod);
+
+        this.setHardness(0.5f);
+        this.setHarvestLevel("pickaxe", 2);
+        this.setLightLevel(0.4f);
+        this.setLightOpacity(16);
+        this.setStepSound(soundTypeAnvil);
     }
 
     @Override

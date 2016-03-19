@@ -1,5 +1,6 @@
 package gliath.mmtest.items;
 
+import gliath.mmtest.MMTest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -14,6 +15,12 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import java.util.List;
 
 public class ModItem extends Item {
+    public ModItem() {
+        super();
+        this.setUnlocalizedName("mod_item");
+        this.setCreativeTab(MMTest.tabMod);
+    }
+
     @Override
     public boolean onItemUse(ItemStack stack, EntityPlayer playerIn, World worldIn, BlockPos pos, EnumFacing side, float hitX, float hitY, float hitZ) {
         if (!playerIn.isSneaking()) {

@@ -1,6 +1,18 @@
 item.mod_item.name=Mod Item
 item.mod_food.name=Mod Food
+
 item.mod_cookedfood.name=Mod Cooked Food
+
+item.mod_sword.name=Mod Sword
+item.mod_pickaxe.name=Mod Pickaxe
+item.mod_shovel.name=Mod Shovel
+item.mod_axe.name=Mod Axe
+item.mod_hoe.name=Mod Hoe
+
+item.mod_helmet.name=Mod Helmet
+item.mod_chestplate.name=Mod Chestplate
+item.mod_leggings.name=Mod Leggings
+item.mod_boots.name=Mod Boots
 
 tile.mod_block.name=Mod Block
 
