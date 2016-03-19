@@ -28,7 +28,8 @@ public class ModItems {
     public static Item mod_leggings;
     public static Item mod_boots;
 
-    public static final Item.ToolMaterial mod_toolmaterial = EnumHelper.addToolMaterial("mod_toolmaterial", Integer.MAX_VALUE, Integer.MAX_VALUE, Float.MAX_VALUE, 12.8f, 128);
+    public static final Item.ToolMaterial mod_toolmaterial = EnumHelper.addToolMaterial("mod_toolmaterial", Integer.MAX_VALUE, Integer.MAX_VALUE, Float.MAX_VALUE, 5.0f, 128);
+    public static final Item.ToolMaterial mod_swordmaterial = EnumHelper.addToolMaterial("mod_swordmaterial", 0, Integer.MAX_VALUE, 0.0f, 496.0f, 128);
     public static final ItemArmor.ArmorMaterial mod_armormaterial = EnumHelper.addArmorMaterial("mod_armormaterial", "mmtest:mod", Integer.MAX_VALUE, new int[]{30, 80, 60, 30}, 128);
 
     public static void init() {
@@ -37,7 +38,7 @@ public class ModItems {
         mod_food = new ModFood();
         mod_cookedfood = new ModCookedFood();
 
-        mod_sword = new ModSword(mod_toolmaterial);
+        mod_sword = new ModSword(mod_swordmaterial);
         mod_pickaxe = new ModPickaxe(mod_toolmaterial);
         mod_axe = new ModAxe(mod_toolmaterial);
         mod_shovel = new ModShovel(mod_toolmaterial);
@@ -65,7 +66,6 @@ public class ModItems {
         GameRegistry.registerItem(mod_chestplate, mod_chestplate.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(mod_leggings, mod_leggings.getUnlocalizedName().substring(5));
         GameRegistry.registerItem(mod_boots, mod_boots.getUnlocalizedName().substring(5));
-
     }
 
     public static void registerRenders() {
